@@ -30,15 +30,15 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: signature, parameters, type, tag, flags
-      11,   34,   34,   34, 0x08,
-      35,   34,   34,   34, 0x08,
+      11,   48,   57,   57, 0x08,
+      58,   57,   57,   57, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_MainWindow[] = {
-    "MainWindow\0on_on_button_clicked()\0\0"
-    "on_off_button_clicked()\0"
+    "MainWindow\0on_horizontalSlider_sliderMoved(int)\0"
+    "position\0\0on_lcdNumber_overflow()\0"
 };
 
 void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -47,12 +47,11 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         Q_ASSERT(staticMetaObject.cast(_o));
         MainWindow *_t = static_cast<MainWindow *>(_o);
         switch (_id) {
-        case 0: _t->on_on_button_clicked(); break;
-        case 1: _t->on_off_button_clicked(); break;
+        case 0: _t->on_horizontalSlider_sliderMoved((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 1: _t->on_lcdNumber_overflow(); break;
         default: ;
         }
     }
-    Q_UNUSED(_a);
 }
 
 const QMetaObjectExtraData MainWindow::staticMetaObjectExtraData = {

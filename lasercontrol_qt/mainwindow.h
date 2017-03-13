@@ -5,6 +5,8 @@
 #include <stdint.h>
 #include <wiringPi.h>
 #include <wiringPiSPI.h>
+#include <unistd.h> // usleep
+
 
 
 bool voltage_out_of_range(double voltage);
@@ -34,9 +36,10 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_on_button_clicked();
 
-    void on_off_button_clicked();
+    void on_horizontalSlider_sliderMoved(int position);
+
+    void on_lcdNumber_overflow();
 
 private:
     Ui::MainWindow *ui;

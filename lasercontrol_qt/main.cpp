@@ -2,6 +2,7 @@
 #include <QApplication>
 
 
+
 //contrain:
 double min_voltage = current_to_voltage(50);
 double max_voltage = .001;
