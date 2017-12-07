@@ -19,4 +19,4 @@ HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui
 
-#LIBS += -lwiringPi
+LIBS += -lwiringPi

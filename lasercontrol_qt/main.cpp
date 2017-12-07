@@ -4,9 +4,10 @@
 
 
 void setup(){
+    int current, piezo; //, result;
 
-      current = wiringPiI2CSetup(0x10);
-      piezo = wiringPiI2CSetup(0x12);
+      wiringPiI2CSetup(0x10);
+      wiringPiI2CSetup(0x12);
 }
 
 

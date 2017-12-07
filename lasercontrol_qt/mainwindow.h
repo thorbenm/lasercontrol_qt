@@ -7,7 +7,6 @@
 #include <wiringPiI2C.h>
 //#include <unistd.h>
 
-      int current, piezo; //, result;
 
 namespace Ui {
 class MainWindow;

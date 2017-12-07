@@ -17,10 +17,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_horizontalSlider_piezo_sliderMoved(int position)
 {
-    wiringPiI2CWriteReg16(piezo, 0x0000, position) ;
+    wiringPiI2CWriteReg16(wiringPiI2CSetup(0x12), 0x0000, position) ;
 }
 
 void MainWindow::on_horizontalSlider_current_sliderMoved(int position)
 {
-    wiringPiI2CWriteReg16(current, 0x0000, position) ;
+    wiringPiI2CWriteReg16(wiringPiI2CSetup(0x10), 0x0000, position) ;
 }
