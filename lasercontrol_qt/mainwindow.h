@@ -4,10 +4,10 @@
 #include <QMainWindow>
 //#include <iostream>
 //#include <errno.h>
-//XX#include <wiringPiI2C.h>
+#include <wiringPiI2C.h>
 //#include <unistd.h>
 
-
+      int current, piezo; //, result;
 
 namespace Ui {
 class MainWindow;
