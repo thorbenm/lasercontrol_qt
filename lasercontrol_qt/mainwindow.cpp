@@ -18,7 +18,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_horizontalSlider_sliderMoved(int position)
 {
     ui->lcdNumber->display((double)position / 100.0);
-    transmit_voltage(current_to_voltage(position / 100.0));
+  //  transmit_voltage(current_to_voltage(position / 100.0));
 }
 
 void MainWindow::on_lcdNumber_overflow()
