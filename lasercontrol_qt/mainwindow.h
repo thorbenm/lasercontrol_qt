@@ -23,9 +23,9 @@ public:
 
 private slots:
 
-    void on_horizontalSlider_sliderMoved(int position);
+    void on_horizontalSlider_piezo_sliderMoved(int position);
 
-    void on_lcdNumber_overflow();
+    void on_horizontalSlider_current_sliderMoved(int position);
 
 private:
     Ui::MainWindow *ui;

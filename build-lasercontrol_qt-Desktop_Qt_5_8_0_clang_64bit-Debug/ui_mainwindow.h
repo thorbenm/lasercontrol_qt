@@ -14,7 +14,6 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
@@ -29,11 +28,10 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
-    QLabel *label;
-    QSlider *horizontalSlider;
-    QLCDNumber *lcdNumber;
-    QLabel *label_2;
-    QLabel *label_3;
+    QLabel *label_current;
+    QLabel *label_piezo;
+    QSlider *horizontalSlider_current;
+    QSlider *horizontalSlider_piezo;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -45,27 +43,24 @@ public:
         MainWindow->resize(813, 437);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        label = new QLabel(centralWidget);
-        label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(230, 80, 101, 21));
-        horizontalSlider = new QSlider(centralWidget);
-        horizontalSlider->setObjectName(QStringLiteral("horizontalSlider"));
-        horizontalSlider->setGeometry(QRect(220, 170, 341, 26));
-        horizontalSlider->setMaximum(5000);
-        horizontalSlider->setOrientation(Qt::Horizontal);
-        lcdNumber = new QLCDNumber(centralWidget);
-        lcdNumber->setObjectName(QStringLiteral("lcdNumber"));
-        lcdNumber->setGeometry(QRect(350, 60, 111, 61));
-        label_2 = new QLabel(centralWidget);
-        label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(500, 70, 68, 31));
-        label_3 = new QLabel(centralWidget);
-        label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(500, 200, 111, 21));
+        label_current = new QLabel(centralWidget);
+        label_current->setObjectName(QStringLiteral("label_current"));
+        label_current->setGeometry(QRect(120, 180, 101, 21));
+        label_piezo = new QLabel(centralWidget);
+        label_piezo->setObjectName(QStringLiteral("label_piezo"));
+        label_piezo->setGeometry(QRect(120, 90, 101, 21));
+        horizontalSlider_current = new QSlider(centralWidget);
+        horizontalSlider_current->setObjectName(QStringLiteral("horizontalSlider_current"));
+        horizontalSlider_current->setGeometry(QRect(270, 180, 381, 22));
+        horizontalSlider_current->setOrientation(Qt::Horizontal);
+        horizontalSlider_piezo = new QSlider(centralWidget);
+        horizontalSlider_piezo->setObjectName(QStringLiteral("horizontalSlider_piezo"));
+        horizontalSlider_piezo->setGeometry(QRect(260, 100, 381, 22));
+        horizontalSlider_piezo->setOrientation(Qt::Horizontal);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 813, 27));
+        menuBar->setGeometry(QRect(0, 0, 813, 22));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -82,9 +77,8 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
-        label->setText(QApplication::translate("MainWindow", "Laser Current:", Q_NULLPTR));
-        label_2->setText(QApplication::translate("MainWindow", "mA", Q_NULLPTR));
-        label_3->setText(QApplication::translate("MainWindow", "(change slowly)", Q_NULLPTR));
+        label_current->setText(QApplication::translate("MainWindow", "Laser Current:", Q_NULLPTR));
+        label_piezo->setText(QApplication::translate("MainWindow", "Piezo:", Q_NULLPTR));
     } // retranslateUi
 
 };

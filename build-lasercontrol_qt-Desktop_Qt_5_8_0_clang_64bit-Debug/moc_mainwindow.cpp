@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
     QByteArrayData data[5];
-    char stringdata0[75];
+    char stringdata0[99];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,14 +32,14 @@ struct qt_meta_stringdata_MainWindow_t {
 static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
-QT_MOC_LITERAL(1, 11, 31), // "on_horizontalSlider_sliderMoved"
-QT_MOC_LITERAL(2, 43, 0), // ""
-QT_MOC_LITERAL(3, 44, 8), // "position"
-QT_MOC_LITERAL(4, 53, 21) // "on_lcdNumber_overflow"
+QT_MOC_LITERAL(1, 11, 37), // "on_horizontalSlider_piezo_sli..."
+QT_MOC_LITERAL(2, 49, 0), // ""
+QT_MOC_LITERAL(3, 50, 8), // "position"
+QT_MOC_LITERAL(4, 59, 39) // "on_horizontalSlider_current_s..."
 
     },
-    "MainWindow\0on_horizontalSlider_sliderMoved\0"
-    "\0position\0on_lcdNumber_overflow"
+    "MainWindow\0on_horizontalSlider_piezo_sliderMoved\0"
+    "\0position\0on_horizontalSlider_current_sliderMoved"
 };
 #undef QT_MOC_LITERAL
 
@@ -58,11 +58,11 @@ static const uint qt_meta_data_MainWindow[] = {
 
  // slots: name, argc, parameters, tag, flags
        1,    1,   24,    2, 0x08 /* Private */,
-       4,    0,   27,    2, 0x08 /* Private */,
+       4,    1,   27,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Int,    3,
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,    3,
 
        0        // eod
 };
@@ -73,8 +73,8 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         MainWindow *_t = static_cast<MainWindow *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_horizontalSlider_sliderMoved((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 1: _t->on_lcdNumber_overflow(); break;
+        case 0: _t->on_horizontalSlider_piezo_sliderMoved((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 1: _t->on_horizontalSlider_current_sliderMoved((*reinterpret_cast< int(*)>(_a[1]))); break;
         default: ;
         }
     }

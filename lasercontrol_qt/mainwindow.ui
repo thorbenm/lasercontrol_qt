@@ -14,11 +14,11 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="label_current">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>80</y>
+      <x>120</x>
+      <y>180</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -27,56 +27,43 @@
      <string>Laser Current:</string>
     </property>
    </widget>
-   <widget class="QSlider" name="horizontalSlider">
+   <widget class="QLabel" name="label_piezo">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>170</y>
-      <width>341</width>
-      <height>26</height>
+      <x>120</x>
+      <y>90</y>
+      <width>101</width>
+      <height>21</height>
      </rect>
     </property>
-    <property name="maximum">
-     <number>5000</number>
+    <property name="text">
+     <string>Piezo:</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider_current">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>180</y>
+      <width>381</width>
+      <height>22</height>
+     </rect>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QLCDNumber" name="lcdNumber">
+   <widget class="QSlider" name="horizontalSlider_piezo">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>60</y>
-      <width>111</width>
-      <height>61</height>
+      <x>260</x>
+      <y>100</y>
+      <width>381</width>
+      <height>22</height>
      </rect>
     </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>500</x>
-      <y>70</y>
-      <width>68</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>mA</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>500</x>
-      <y>200</y>
-      <width>111</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>(change slowly)</string>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
     </property>
    </widget>
   </widget>
@@ -86,7 +73,7 @@
      <x>0</x>
      <y>0</y>
      <width>813</width>
-     <height>27</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
