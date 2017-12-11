@@ -5,7 +5,7 @@
 //#include <iostream>
 //#include <errno.h>
 #include <wiringPiI2C.h>
-//#include <unistd.h>
+#include <unistd.h>
 
 
 namespace Ui {
@@ -25,6 +25,10 @@ private slots:
     void on_horizontalSlider_piezo_sliderMoved(int position);
 
     void on_horizontalSlider_current_sliderMoved(int position);
+
+    void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::MainWindow *ui;
