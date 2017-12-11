@@ -6,6 +6,7 @@
 //#include <errno.h>
 #include <wiringPiI2C.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 
 namespace Ui {

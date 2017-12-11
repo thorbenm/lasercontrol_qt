@@ -28,13 +28,13 @@ void MainWindow::on_horizontalSlider_current_sliderMoved(int position)
 void MainWindow::on_pushButton_clicked()
 {
     wiringPiI2CWriteReg16(wiringPiI2CSetup(0x10), 0x0001, 255);
-    usleep(10000);
+    usleep(100000);
     wiringPiI2CWriteReg16(wiringPiI2CSetup(0x10), 0x0001, 0x0000);
 }
 
 void MainWindow::on_pushButton_2_clicked()
 {
-   system("/bin/sh shutdown -P now");
+   system("shutdown -P now");
    //QProcess myProcess;
    //myProcess.startDetached("sudo shutdown -P now")
 }

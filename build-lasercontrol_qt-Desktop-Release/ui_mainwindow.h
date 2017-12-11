@@ -17,6 +17,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QSlider>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
@@ -32,6 +33,8 @@ public:
     QLabel *label_piezo;
     QSlider *horizontalSlider_current;
     QSlider *horizontalSlider_piezo;
+    QPushButton *pushButton;
+    QPushButton *pushButton_2;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -48,15 +51,21 @@ public:
         label_current->setGeometry(QRect(120, 180, 101, 21));
         label_piezo = new QLabel(centralWidget);
         label_piezo->setObjectName(QStringLiteral("label_piezo"));
-        label_piezo->setGeometry(QRect(120, 90, 101, 21));
+        label_piezo->setGeometry(QRect(120, 100, 101, 21));
         horizontalSlider_current = new QSlider(centralWidget);
         horizontalSlider_current->setObjectName(QStringLiteral("horizontalSlider_current"));
-        horizontalSlider_current->setGeometry(QRect(270, 180, 381, 22));
+        horizontalSlider_current->setGeometry(QRect(260, 180, 381, 22));
         horizontalSlider_current->setOrientation(Qt::Horizontal);
         horizontalSlider_piezo = new QSlider(centralWidget);
         horizontalSlider_piezo->setObjectName(QStringLiteral("horizontalSlider_piezo"));
         horizontalSlider_piezo->setGeometry(QRect(260, 100, 381, 22));
         horizontalSlider_piezo->setOrientation(Qt::Horizontal);
+        pushButton = new QPushButton(centralWidget);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setGeometry(QRect(340, 230, 141, 51));
+        pushButton_2 = new QPushButton(centralWidget);
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        pushButton_2->setGeometry(QRect(670, 320, 113, 32));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -77,8 +86,10 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
-        label_current->setText(QApplication::translate("MainWindow", "Laser Current:", 0));
+        label_current->setText(QApplication::translate("MainWindow", "Current:", 0));
         label_piezo->setText(QApplication::translate("MainWindow", "Piezo:", 0));
+        pushButton->setText(QApplication::translate("MainWindow", "On/Off", 0));
+        pushButton_2->setText(QApplication::translate("MainWindow", "Shutdown", 0));
     } // retranslateUi
 
 };
